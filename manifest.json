@@ -1,0 +1,17 @@
+// manifest.json
+{
+  "manifest_version": 3,
+  "name": "Trade Duration Calculator",
+  "version": "1.0",
+  "description": "Adds a duration column to trading tables showing time taken to complete each trade",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Calculate Trade Durations"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
